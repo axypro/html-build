@@ -1,0 +1,33 @@
+{
+    "name": "axy/html-build",
+    "type": "library",
+    "description": "HTML build helpers",
+    "keywords": [
+        "HTML"
+    ],
+    "homepage": "https://github.com/axypro/html-build",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oleg Grigoriev",
+            "email": "go.vasac@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5",
+        "squizlabs/php_codesniffer": "^3.4",
+        "phpmd/phpmd": "^2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "axy\\html\\build\\": "src",
+            "axy\\html\\build\\tests\\": "tests"
+        }
+    },
+    "archive": {
+        "exclude": ["/tests/*", "/doc/*", "/cs.sh", "/phpmd.sh", "/*.xml.dist", "/CHANGELOG.md"]
+    }
+}
