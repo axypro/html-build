@@ -1,7 +1,7 @@
-### dev-master
+### 1.0.1 (02.09.2019)
 
-* GH-3: escape(null) returns empty string not type-error
-* GH-2: some more formats for `HTML::select()` options
+* #3: escape(null) returns empty string not type-error
+* #2: some more formats for `HTML::select()` options
 
 ### 1.0.0 (07.07.2019)
 
