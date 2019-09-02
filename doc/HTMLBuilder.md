@@ -124,7 +124,13 @@ echo HTMLBuilder::select(['name' => $name], $options, $current, 'Select, please'
 ```
 
 * `$attrs` - the open tag attributes (for example, `name` for a form)
-* `$options` - variants array (key - value attribute of `<option>`, value - caption)
+* `$options` - variants array (see format below)
 * `$current` - key of the default selected element (`NULL` - no selected)
 * `$none` - When `$current=NULL` and `$none` is set then create new option element
 with the value="" and the caption="$none". It element push to the start of variants list and select. 
+
+Options formats:
+
+* `key => value`: `[1 => 'January', 2 => 'February']
+* List of items: `[[1, 'January'], [2, 'February']]`
+* List of dictionaries: `[['key' => 1, 'label' => 'January'], ['key' => 2, 'label' => 'February']]`

@@ -203,4 +203,24 @@ class HTMLBuilderTest extends TestCase
         ]);
         $this->assertSame($expected2, HTMLBuilder::select($attrs, $options, '2', 'Empty'));
     }
+
+    public function testSelectFormat(): void
+    {
+        $attrs = [
+            'name' => 'field',
+        ];
+        $options = [
+            ['a', 'One'],
+            ['b', 'Two'],
+            ['c', null],
+        ];
+        $expected = implode('', [
+            '<select name="field">',
+            '<option value="a">One</option>',
+            '<option value="b">Two</option>',
+            '<option value="c"></option>',
+            '</select>',
+        ]);
+        $this->assertSame($expected, HTMLBuilder::select($attrs, $options));
+    }
 }

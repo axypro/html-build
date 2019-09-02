@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace axy\html\build;
 
+use axy\html\build\helpers\SelectOptions;
+
 /**
  * Helpers for HTML build
  */
@@ -167,7 +169,7 @@ class HTMLBuilder
         } else {
             $current = (string)$current;
         }
-        foreach ($options as $value => $caption) {
+        foreach (SelectOptions::convert($options) as $value => $caption) {
             $value = (string)$value;
             $oAttrs = [
                 'value' => $value,
