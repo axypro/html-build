@@ -16,12 +16,12 @@ class HTMLBuilder
     /**
      * Returns escaped text for HTML text or attribute
      *
-     * @param string $text
+     * @param string|null $text
      * @return string
      */
-    public static function escape(string $text): string
+    public static function escape(?string $text): string
     {
-        return htmlspecialchars($text, ENT_COMPAT, 'UTF-8');
+        return htmlspecialchars((string)$text, ENT_COMPAT, 'UTF-8');
     }
 
     /**

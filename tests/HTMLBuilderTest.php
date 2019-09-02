@@ -21,6 +21,7 @@ class HTMLBuilderTest extends TestCase
         $text = 'This is "escaped" <text>';
         $escaped = 'This is &quot;escaped&quot; &lt;text&gt;';
         $this->assertSame($escaped, HTMLBuilder::escape($text));
+        $this->assertSame('', HTMLBuilder::escape(null));
     }
 
     /**
